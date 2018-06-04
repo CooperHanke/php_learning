@@ -62,9 +62,19 @@ foreach($books as $book) {
 // grab the keys
 echo "Info on all the books in the array of arrays:\n";
 foreach($books as $key => $value) {
-    echo "ttle: {$key}\n";
+    echo "title: {$key}\n";
     foreach($value as $key2 => $value2) {
         echo "{$key2}: {$value2}\n";
+    }
+}
+echo "\n";
+
+echo "Let's do that again, but only for books after 1950!\n";
+foreach ($books as $key => $value) {
+    foreach ($value as $contentKey => $contentValue) {
+        if ($contentKey == 'published' && $contentValue >= 1950) {
+            // start putting things here
+        }
     }
 }
 echo "\n";
