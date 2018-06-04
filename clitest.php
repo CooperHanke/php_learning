@@ -73,7 +73,10 @@ echo "Let's do that again, but only for books after 1950!\n";
 foreach ($books as $key => $value) {
     foreach ($value as $contentKey => $contentValue) {
         if ($contentKey == 'published' && $contentValue >= 1950) {
-            // start putting things here
+            echo "title: {$key}\n";
+            foreach ($value as $contentKey => $contentValue) {
+                echo "{$contentKey}: {$contentValue}\n";
+            }
         }
     }
 }
